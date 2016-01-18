@@ -86,8 +86,7 @@
 			children = (
 				89BA95361C4C77A8001FD453 /* FakeWorkFlowComponent.swift */,
 			);
-			name = fakes;
-			path = ../WorkFlow/fakes;
+			path = fakes;
 			sourceTree = "<group>";
 		};
 		89BFAC111C4C7192007B3415 = {
