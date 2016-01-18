@@ -15,7 +15,6 @@
 		89BFAC381C4C72D1007B3415 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC361C4C72D1007B3415 /* Quick.framework */; };
 		89BFAC3A1C4C72E8007B3415 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC351C4C72D1007B3415 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89BFAC3B1C4C72E8007B3415 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC361C4C72D1007B3415 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		89BFAC3D1C4C732F007B3415 /* WorkFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC3C1C4C732F007B3415 /* WorkFlowComponent.swift */; };
 		89BFAC3F1C4C7352007B3415 /* LinearWorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC3E1C4C7352007B3415 /* LinearWorkFlow.swift */; };
 		89BFAC411C4C74E2007B3415 /* WorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC401C4C74E2007B3415 /* WorkFlow.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,6 @@
 		89BFAC2C1C4C7192007B3415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BFAC351C4C72D1007B3415 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		89BFAC361C4C72D1007B3415 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		89BFAC3C1C4C732F007B3415 /* WorkFlowComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkFlowComponent.swift; sourceTree = "<group>"; };
 		89BFAC3E1C4C7352007B3415 /* LinearWorkFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearWorkFlow.swift; sourceTree = "<group>"; };
 		89BFAC401C4C74E2007B3415 /* WorkFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +111,6 @@
 				89BFAC1E1C4C7192007B3415 /* WorkFlow.h */,
 				89BFAC401C4C74E2007B3415 /* WorkFlow.swift */,
 				89BFAC3E1C4C7352007B3415 /* LinearWorkFlow.swift */,
-				89BFAC3C1C4C732F007B3415 /* WorkFlowComponent.swift */,
 				89BFAC201C4C7192007B3415 /* Info.plist */,
 			);
 			path = WorkFlow;
@@ -240,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89BFAC3D1C4C732F007B3415 /* WorkFlowComponent.swift in Sources */,
 				89BFAC411C4C74E2007B3415 /* WorkFlow.swift in Sources */,
 				89BFAC3F1C4C7352007B3415 /* LinearWorkFlow.swift in Sources */,
 			);

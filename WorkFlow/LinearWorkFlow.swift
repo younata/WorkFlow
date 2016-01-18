@@ -7,11 +7,13 @@ public final class LinearWorkFlow: WorkFlow {
 
     private var cancelled: Bool = false
 
+    private let onAdvance: WorkFlow -> Void
     private let onFinish: WorkFlow -> Void
     private let onCancel: WorkFlow -> Void
 
-    public init(components: [WorkFlowComponent], finish: WorkFlow -> Void, cancel: WorkFlow -> Void) {
+    public init(components: [WorkFlowComponent], advance: WorkFlow -> Void, finish: WorkFlow -> Void, cancel: WorkFlow -> Void) {
         self.components = components
+        self.onAdvance = advance
         self.onFinish = finish
         self.onCancel = cancel
     }
@@ -28,6 +30,7 @@ public final class LinearWorkFlow: WorkFlow {
 
     public func advanceWorkFlow() {
         guard !self.cancelled else { return }
+        self.onAdvance(self)
         self.currentComponentIndex += 1
         if self.currentComponentIndex == self.components.count {
             self.currentComponent = nil

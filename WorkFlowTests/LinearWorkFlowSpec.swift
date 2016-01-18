@@ -10,6 +10,7 @@ class LinearWorkFlowSpec: QuickSpec {
         var secondComponent: FakeWorkFlowComponent!
         var thirdComponent: FakeWorkFlowComponent!
 
+        var advanceCallCount = 0
         var finishCallCount = 0
         var cancelCallCount = 0
 
@@ -18,6 +19,7 @@ class LinearWorkFlowSpec: QuickSpec {
             secondComponent = FakeWorkFlowComponent()
             thirdComponent = FakeWorkFlowComponent()
 
+            advanceCallCount = 0
             finishCallCount = 0
             cancelCallCount = 0
 
@@ -26,6 +28,7 @@ class LinearWorkFlowSpec: QuickSpec {
                 secondComponent,
                 thirdComponent,
                 ],
+                advance: { _ in advanceCallCount += 1 },
                 finish: { _ in finishCallCount += 1 },
                 cancel: { _ in cancelCallCount += 1 }
             )
@@ -45,7 +48,8 @@ class LinearWorkFlowSpec: QuickSpec {
             expect(subject.nextComponent).to(beNil())
         }
 
-        it("doesn't call either finish or cancel") {
+        it("doesn't call advance, finish, or cancel") {
+            expect(advanceCallCount) == 0
             expect(finishCallCount) == 0
             expect(cancelCallCount) == 0
         }
@@ -69,14 +73,19 @@ class LinearWorkFlowSpec: QuickSpec {
                 expect(thirdComponent.beginWorkCallCount) == 0
             }
 
-            it("doesn't call either finish or cancel") {
+            it("doesn't call advance, finish or cancel") {
                 expect(finishCallCount) == 0
                 expect(cancelCallCount) == 0
+                expect(advanceCallCount) == 0
             }
 
             context("calling advanceWorkFlow") {
                 beforeEach {
                     subject.advanceWorkFlow()
+                }
+
+                it("calls advance") {
+                    expect(advanceCallCount) == 1
                 }
 
                 it("sets the current component") {
@@ -157,6 +166,10 @@ class LinearWorkFlowSpec: QuickSpec {
                         expect(subject.nextComponent).to(beNil())
                     }
 
+                    it("doesn't call advance") {
+                        expect(advanceCallCount) == 1
+                    }
+
                     it("calls the cancel handler") {
                         expect(cancelCallCount) == 1
                     }
@@ -175,7 +188,7 @@ class LinearWorkFlowSpec: QuickSpec {
                         expect(subject.nextComponent).to(beNil())
                         expect(finishCallCount) == 0
                         expect(cancelCallCount) == 1
-
+                        expect(advanceCallCount) == 1
                     }
                 }
             }
