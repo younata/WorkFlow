@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: xcode7.2
+
+before_install:
+ - brew update
+ - brew install carthage
+ - brew install swiftlint
+script: "xcodebuild -project WorkFlow.xcodeproj -scheme WorkFlow -destination 'platform=iOS Simulator,name=iPhone 6' test"

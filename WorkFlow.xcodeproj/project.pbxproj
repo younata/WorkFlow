@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89BA95341C4C7731001FD453 /* LinearWorkFlowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA95331C4C7731001FD453 /* LinearWorkFlowSpec.swift */; };
+		89BA95371C4C77B4001FD453 /* FakeWorkFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA95361C4C77A8001FD453 /* FakeWorkFlowComponent.swift */; };
 		89BFAC1F1C4C7192007B3415 /* WorkFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 89BFAC1E1C4C7192007B3415 /* WorkFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89BFAC261C4C7192007B3415 /* WorkFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC1B1C4C7192007B3415 /* WorkFlow.framework */; };
-		89BFAC2B1C4C7192007B3415 /* WorkFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC2A1C4C7192007B3415 /* WorkFlowTests.swift */; };
+		89BFAC371C4C72D1007B3415 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC351C4C72D1007B3415 /* Nimble.framework */; };
+		89BFAC381C4C72D1007B3415 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC361C4C72D1007B3415 /* Quick.framework */; };
+		89BFAC3A1C4C72E8007B3415 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC351C4C72D1007B3415 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89BFAC3B1C4C72E8007B3415 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFAC361C4C72D1007B3415 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89BFAC3D1C4C732F007B3415 /* WorkFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC3C1C4C732F007B3415 /* WorkFlowComponent.swift */; };
+		89BFAC3F1C4C7352007B3415 /* LinearWorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC3E1C4C7352007B3415 /* LinearWorkFlow.swift */; };
+		89BFAC411C4C74E2007B3415 /* WorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFAC401C4C74E2007B3415 /* WorkFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,13 +30,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		89BFAC391C4C72DC007B3415 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				89BFAC3A1C4C72E8007B3415 /* Nimble.framework in Embed Frameworks */,
+				89BFAC3B1C4C72E8007B3415 /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		89BA95331C4C7731001FD453 /* LinearWorkFlowSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearWorkFlowSpec.swift; sourceTree = "<group>"; };
+		89BA95361C4C77A8001FD453 /* FakeWorkFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeWorkFlowComponent.swift; sourceTree = "<group>"; };
 		89BFAC1B1C4C7192007B3415 /* WorkFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WorkFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BFAC1E1C4C7192007B3415 /* WorkFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkFlow.h; sourceTree = "<group>"; };
 		89BFAC201C4C7192007B3415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BFAC251C4C7192007B3415 /* WorkFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89BFAC2A1C4C7192007B3415 /* WorkFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkFlowTests.swift; sourceTree = "<group>"; };
 		89BFAC2C1C4C7192007B3415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89BFAC351C4C72D1007B3415 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		89BFAC361C4C72D1007B3415 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		89BFAC3C1C4C732F007B3415 /* WorkFlowComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkFlowComponent.swift; sourceTree = "<group>"; };
+		89BFAC3E1C4C7352007B3415 /* LinearWorkFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearWorkFlow.swift; sourceTree = "<group>"; };
+		89BFAC401C4C74E2007B3415 /* WorkFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,12 +73,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				89BFAC261C4C7192007B3415 /* WorkFlow.framework in Frameworks */,
+				89BFAC371C4C72D1007B3415 /* Nimble.framework in Frameworks */,
+				89BFAC381C4C72D1007B3415 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89BA95351C4C77A8001FD453 /* fakes */ = {
+			isa = PBXGroup;
+			children = (
+				89BA95361C4C77A8001FD453 /* FakeWorkFlowComponent.swift */,
+			);
+			name = fakes;
+			path = ../WorkFlow/fakes;
+			sourceTree = "<group>";
+		};
 		89BFAC111C4C7192007B3415 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				89BFAC1E1C4C7192007B3415 /* WorkFlow.h */,
+				89BFAC401C4C74E2007B3415 /* WorkFlow.swift */,
+				89BFAC3E1C4C7352007B3415 /* LinearWorkFlow.swift */,
+				89BFAC3C1C4C732F007B3415 /* WorkFlowComponent.swift */,
 				89BFAC201C4C7192007B3415 /* Info.plist */,
 			);
 			path = WorkFlow;
@@ -80,8 +123,11 @@
 		89BFAC291C4C7192007B3415 /* WorkFlowTests */ = {
 			isa = PBXGroup;
 			children = (
-				89BFAC2A1C4C7192007B3415 /* WorkFlowTests.swift */,
+				89BFAC351C4C72D1007B3415 /* Nimble.framework */,
+				89BFAC361C4C72D1007B3415 /* Quick.framework */,
 				89BFAC2C1C4C7192007B3415 /* Info.plist */,
+				89BA95351C4C77A8001FD453 /* fakes */,
+				89BA95331C4C7731001FD453 /* LinearWorkFlowSpec.swift */,
 			);
 			path = WorkFlowTests;
 			sourceTree = "<group>";
@@ -125,6 +171,7 @@
 				89BFAC211C4C7192007B3415 /* Sources */,
 				89BFAC221C4C7192007B3415 /* Frameworks */,
 				89BFAC231C4C7192007B3415 /* Resources */,
+				89BFAC391C4C72DC007B3415 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BFAC3D1C4C732F007B3415 /* WorkFlowComponent.swift in Sources */,
+				89BFAC411C4C74E2007B3415 /* WorkFlow.swift in Sources */,
+				89BFAC3F1C4C7352007B3415 /* LinearWorkFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89BFAC2B1C4C7192007B3415 /* WorkFlowTests.swift in Sources */,
+				89BA95341C4C7731001FD453 /* LinearWorkFlowSpec.swift in Sources */,
+				89BA95371C4C77B4001FD453 /* FakeWorkFlowComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +359,7 @@
 		89BFAC301C4C7192007B3415 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +370,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelbrindle.WorkFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		89BFAC311C4C7192007B3415 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -340,16 +394,27 @@
 		89BFAC331C4C7192007B3415 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WorkFlowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelbrindle.WorkFlowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		89BFAC341C4C7192007B3415 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WorkFlowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelbrindle.WorkFlowTests;
@@ -376,6 +441,7 @@
 				89BFAC311C4C7192007B3415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89BFAC321C4C7192007B3415 /* Build configuration list for PBXNativeTarget "WorkFlowTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +450,7 @@
 				89BFAC341C4C7192007B3415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
