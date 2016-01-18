@@ -5,4 +5,5 @@ before_install:
  - brew update
  - brew install carthage
  - brew install swiftlint
+ - carthage update --platform ios
 script: "xcodebuild -project WorkFlow.xcodeproj -scheme WorkFlow -destination 'platform=iOS Simulator,name=iPhone 6' test"
