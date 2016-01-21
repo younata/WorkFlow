@@ -79,6 +79,12 @@ class LinearWorkFlowSpec: QuickSpec {
                 expect(advanceCallCount) == 0
             }
 
+            it("calls advance when the component calls it's finish callback") {
+                firstComponent.beginWorkArgsForCall(0)()
+
+                expect(advanceCallCount) == 1
+            }
+
             context("calling advanceWorkFlow") {
                 beforeEach {
                     subject.advanceWorkFlow()

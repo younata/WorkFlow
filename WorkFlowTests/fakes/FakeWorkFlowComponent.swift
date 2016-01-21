@@ -18,13 +18,13 @@ class FakeWorkFlowComponent : WorkFlowComponent, Equatable, CustomDebugStringCon
     }
 
     private(set) var beginWorkCallCount : Int = 0
-    private var beginWorkArgs : Array<(WorkFlow)> = []
-    func beginWorkArgsForCall(callIndex: Int) -> (WorkFlow) {
+    private var beginWorkArgs : Array<(WorkFlowFinishCallback)> = []
+    func beginWorkArgsForCall(callIndex: Int) -> (WorkFlowFinishCallback) {
         return self.beginWorkArgs[callIndex]
     }
-    func beginWork(workFlow: WorkFlow) {
+    func beginWork(callback: WorkFlowFinishCallback) {
         self.beginWorkCallCount++
-        self.beginWorkArgs.append((workFlow))
+        self.beginWorkArgs.append(callback)
     }
 
     static func reset() {

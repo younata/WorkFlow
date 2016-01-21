@@ -25,7 +25,7 @@ public final class LinearWorkFlow: WorkFlow {
         let component = self.components[self.currentComponentIndex]
         self.currentComponent = component
         self.setNextComponentIfPossible()
-        component.beginWork(self)
+        component.beginWork(self.advanceWorkFlow)
     }
 
     public func advanceWorkFlow() {
@@ -40,7 +40,7 @@ public final class LinearWorkFlow: WorkFlow {
             let component = self.components[self.currentComponentIndex]
             self.currentComponent = component
             self.setNextComponentIfPossible()
-            component.beginWork(self)
+            component.beginWork(self.advanceWorkFlow)
         }
     }
 

@@ -9,6 +9,8 @@ public protocol WorkFlow {
     func cancelWorkFlow()
 }
 
+public typealias WorkFlowFinishCallback = Void -> Void
+
 public protocol WorkFlowComponent {
-    func beginWork(workFlow: WorkFlow)
+    func beginWork(finish: WorkFlowFinishCallback)
 }
