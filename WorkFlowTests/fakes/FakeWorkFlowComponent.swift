@@ -6,7 +6,7 @@ import WorkFlow
 private var number: Int = 0
 
 class FakeWorkFlowComponent : WorkFlowComponent, Equatable, CustomDebugStringConvertible {
-    private let hash: Int
+    fileprivate let hash: Int
 
     var debugDescription: String {
         return "FakeWorkFlowComponent - \(hash)"
@@ -17,13 +17,13 @@ class FakeWorkFlowComponent : WorkFlowComponent, Equatable, CustomDebugStringCon
         number += 1
     }
 
-    private(set) var beginWorkCallCount : Int = 0
-    private var beginWorkArgs : Array<(WorkFlowFinishCallback)> = []
-    func beginWorkArgsForCall(callIndex: Int) -> (WorkFlowFinishCallback) {
+    fileprivate(set) var beginWorkCallCount : Int = 0
+    fileprivate var beginWorkArgs : Array<(WorkFlowFinishCallback)> = []
+    func beginWorkArgsForCall(_ callIndex: Int) -> (WorkFlowFinishCallback) {
         return self.beginWorkArgs[callIndex]
     }
-    func beginWork(callback: WorkFlowFinishCallback) {
-        self.beginWorkCallCount++
+    func beginWork(_ callback: WorkFlowFinishCallback) {
+        self.beginWorkCallCount += 1
         self.beginWorkArgs.append(callback)
     }
 

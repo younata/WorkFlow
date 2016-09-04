@@ -7,11 +7,11 @@ public final class LinearWorkFlow: WorkFlow {
 
     private var cancelled: Bool = false
 
-    private let onAdvance: WorkFlow -> Void
-    private let onFinish: WorkFlow -> Void
-    private let onCancel: WorkFlow -> Void
+    private let onAdvance: (WorkFlow) -> Void
+    private let onFinish: (WorkFlow) -> Void
+    private let onCancel: (WorkFlow) -> Void
 
-    public init(components: [WorkFlowComponent], advance: WorkFlow -> Void, finish: WorkFlow -> Void, cancel: WorkFlow -> Void) {
+    public init(components: [WorkFlowComponent], advance: @escaping (WorkFlow) -> Void, finish: @escaping (WorkFlow) -> Void, cancel: @escaping (WorkFlow) -> Void) {
         self.components = components
         self.onAdvance = advance
         self.onFinish = finish
