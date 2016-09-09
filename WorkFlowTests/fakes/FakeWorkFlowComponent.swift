@@ -22,7 +22,7 @@ class FakeWorkFlowComponent : WorkFlowComponent, Equatable, CustomDebugStringCon
     func beginWorkArgsForCall(_ callIndex: Int) -> (WorkFlowFinishCallback) {
         return self.beginWorkArgs[callIndex]
     }
-    func beginWork(_ callback: WorkFlowFinishCallback) {
+    func beginWork(_ callback: @escaping WorkFlowFinishCallback) {
         self.beginWorkCallCount += 1
         self.beginWorkArgs.append(callback)
     }

@@ -12,5 +12,5 @@ public protocol WorkFlow {
 public typealias WorkFlowFinishCallback = (Void) -> Void
 
 public protocol WorkFlowComponent {
-    func beginWork(_ finish: WorkFlowFinishCallback)
+    func beginWork(_ finish: @escaping WorkFlowFinishCallback)
 }
