@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WorkFlow-macOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WorkFlow.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>898320651DC1235100E32412</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8983206D1DC1235100E32412</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>89BFAC1A1C4C7192007B3415</key>
 		<dict>
 			<key>primary</key>
